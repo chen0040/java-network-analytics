@@ -18,6 +18,23 @@ public class Edge implements Serializable {
    private int w;
    private double weight;
 
+   public Edge(){
+
+   }
+
+   public Edge(int v, int w) {
+      this.v = v;
+      this.w = w;
+   }
+
+   public int either() {
+      return v;
+   }
+
+   public int other(int x) {
+      return x == this.v ? this.w : this.v;
+   }
+
 
    @Override public boolean equals(Object o) {
       if (this == o)
